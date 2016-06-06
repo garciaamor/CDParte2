@@ -10,33 +10,28 @@ import javax.swing.JOptionPane;
 public class Principal {
 
     public static boolean p = false;
+    /**
+         * Se declaran dos variables, de tipo in
+         */
+        static int numeroDigitos = 0;
+        static int ndig = 0;
+        
+        
 
     public static void main(String arg[]) {
         
-        /**
-         * Se declaran
-         */
-        int numeroDigitos = 2;
-        int ndig = 0;
+        calculo();
         
-        /**
-         * Se le asigna a la variable dig un numero que nosotros le indicaremos por teclado
-         */
-        numeroDigitos = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese como parametro, un numero de digitos correcto (mayor que 0): "));
         
-        /**
-         * Cambiado el mensaje que nos muestra por consola para que sea mas exactos
-         * El numero maximo de digitos establecido a 5, ya que el for del codigo no llega a los 6 digitos
-         */
-        if (numeroDigitos <= 0 ||numeroDigitos>5) {
-            System.out.println("Ingrese como parámetro, un numero de digitos entre 1 y 5 : ");
-        }
         
-        /**
-         * El for a continuacion contempla hasta el numero 99999, es decir, 5 digitos, el programa no sirve para calcular un numero mayor
-         */
         
-        for (int i = 1; i <= 99999; i++) {
+    }
+    /**
+     * El metodo a continuacion realiza un for para hacer el calculo de los numeros primos
+     * El for a continuacion contempla hasta el numero 99999, es decir, 5 digitos, el programa no sirve para calcular un numero mayor      */
+    
+    public static void calculo(){
+    for (int i = 1; i <= 99999; i++) {
             int aux = i;
 
             int contador = 0;
@@ -83,5 +78,18 @@ public class Principal {
             }
         }
     }
-
+    public static void Validar(){
+        /**
+         * Se le asigna a la variable dig un numero que nosotros le indicaremos por teclado
+         */
+        numeroDigitos = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese como parametro, un numero de digitos correcto (mayor que 0): "));
+        
+        /**
+         * Cambiados el mensaje que nos muestra por consola y la condicion del if, para que sean mas exactos
+         * El numero maximo de digitos establecido a 5, ya que el for del codigo no llega a los 6 digitos
+         */
+        if (numeroDigitos <= 0 ||numeroDigitos>5) {
+            System.out.println("Ingrese como parámetro, un numero de digitos entre 1 y 5 : ");
+        }
+    }
 }
