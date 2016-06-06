@@ -1,15 +1,29 @@
 package examenfinalparte2;
 
+import javax.swing.JOptionPane;
+
+/**
+ * Clase que nos indicara y nos mostrara por pantalla todos los numeros primos que cumplan con la caracteristica que le indiquemos
+ * El programa nos pedira introducir un numero mayor que 0 y nos mostrara por pantalla todos los numeros primos existentes con el numero de digitos que nosotros indicamos
+ * @author jgarciaamor
+ */
 public class Principal {
 
     public static boolean p = false;
 
     public static void main(String arg[]) {
+        
         int dig = 2;
         int ndig = 0;
+        
+        dig = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese como parametro, un numero de digitos correcto (mayor que 0): "));
+        
         if (dig <= 0) {
             System.out.println("Ingrese como parámetro, un numero de digitos correcto (mayor que 0): ");
         }
+        
+        
+        
         for (int i = 1; i <= 99999; i++) {
             int aux = i;
 
