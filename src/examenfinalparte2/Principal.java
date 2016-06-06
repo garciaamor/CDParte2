@@ -13,12 +13,18 @@ public class Principal {
 
     public static void main(String arg[]) {
         
-        int dig = 2;
+        /**
+         * Se declaran
+         */
+        int numeroDigitos = 2;
         int ndig = 0;
         
-        dig = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese como parametro, un numero de digitos correcto (mayor que 0): "));
+        /**
+         * Se le asigna a la variable dig un numero que nosotros le indicaremos por teclado
+         */
+        numeroDigitos = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese como parametro, un numero de digitos correcto (mayor que 0): "));
         
-        if (dig <= 0) {
+        if (numeroDigitos <= 0) {
             System.out.println("Ingrese como parámetro, un numero de digitos correcto (mayor que 0): ");
         }
         
@@ -35,7 +41,7 @@ public class Principal {
             }
             ndig = contador;
 
-            if (ndig == dig) {
+            if (ndig == numeroDigitos) {
                 if (i < 4) {
                     p = true;
                 } else {
