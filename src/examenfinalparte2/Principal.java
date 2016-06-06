@@ -19,8 +19,9 @@ public class Principal {
         
 
     public static void main(String arg[]) {
+        Validar();
+        Calculo();
         
-        calculo();
         
         
         
@@ -30,7 +31,7 @@ public class Principal {
      * El metodo a continuacion realiza un for para hacer el calculo de los numeros primos
      * El for a continuacion contempla hasta el numero 99999, es decir, 5 digitos, el programa no sirve para calcular un numero mayor      */
     
-    public static void calculo(){
+    public static void Calculo(){
     for (int i = 1; i <= 99999; i++) {
             int aux = i;
 
