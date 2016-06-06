@@ -24,11 +24,17 @@ public class Principal {
          */
         numeroDigitos = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese como parametro, un numero de digitos correcto (mayor que 0): "));
         
-        if (numeroDigitos <= 0) {
-            System.out.println("Ingrese como parámetro, un numero de digitos correcto (mayor que 0): ");
+        /**
+         * Cambiado el mensaje que nos muestra por consola para que sea mas exactos
+         * El numero maximo de digitos establecido a 5, ya que el for del codigo no llega a los 6 digitos
+         */
+        if (numeroDigitos <= 0 ||numeroDigitos>5) {
+            System.out.println("Ingrese como parámetro, un numero de digitos entre 1 y 5 : ");
         }
         
-        
+        /**
+         * El for a continuacion contempla hasta el numero 99999, es decir, 5 digitos, el programa no sirve para calcular un numero mayor
+         */
         
         for (int i = 1; i <= 99999; i++) {
             int aux = i;
