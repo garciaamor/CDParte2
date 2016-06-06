@@ -11,7 +11,8 @@ public class Principal {
 
     public static boolean p = false;
     /**
-         * Se declaran dos variables, de tipo in
+         * Se declaran dos variables, de tipo int y static, para asi poder tener el tronco del programa en metodos
+         * 
          */
         static int numeroDigitos = 0;
         static int ndig = 0;
@@ -29,7 +30,9 @@ public class Principal {
     }
     /**
      * El metodo a continuacion realiza un for para hacer el calculo de los numeros primos
-     * El for a continuacion contempla hasta el numero 99999, es decir, 5 digitos, el programa no sirve para calcular un numero mayor      */
+     * El for a continuacion contempla hasta el numero 99999, es decir, 5 digitos, el programa no sirve para calcular un numero mayor     
+     * El metodo es declarado static para poder trabajar con el m�s comodamente desde la misma clase
+     */
     
     public static void Calculo(){
     for (int i = 1; i <= 99999; i++) {
@@ -79,6 +82,9 @@ public class Principal {
             }
         }
     }
+    /**
+     * Metodo llamado Validar con el inicio del programa, es decir la validacion del numero de digitos y la asginacion del propio numero de digitos del que queremos saber los numeros primos
+     */
     public static void Validar(){
         /**
          * Se le asigna a la variable dig un numero que nosotros le indicaremos por teclado
