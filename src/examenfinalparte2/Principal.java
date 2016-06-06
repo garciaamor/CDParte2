@@ -9,13 +9,13 @@ import javax.swing.JOptionPane;
  */
 public class Principal {
 
-    public static boolean confirmPrimo = false;
+    public static boolean numPrimo = false;
     /**
          * Se declaran dos variables, de tipo int y static, para asi poder tener el tronco del programa en metodos
          * 
          */
         static int numeroDigitos = 0;
-        static int numPrimo = 0;
+        static int numComparacion = 0;
         
         
 /**
@@ -37,52 +37,53 @@ public class Principal {
      * El metodo a continuacion realiza un for para hacer el calculo de los numeros primos
      * El for a continuacion contempla hasta el numero 99999, es decir, 5 digitos, el programa no sirve para calcular un numero mayor, ya que el numero de valores a devolver seria demasiado alto y haria el programa muy lento    
      * El metodo es declarado static para poder trabajar con el m�s comodamente desde la misma clase
+     * La variable de tipo int divisNoDecimal comprueba que el numero es un numero entero
      * El boolean numPrimo es el que nos indicara al final si el numero comparado es primo; de serlo, cambiara su valor a true y se nos devolvera por pantalla la variable numero
      */
     
     public static void Calculo(){
     for (int numero = 1; numero <= 99999; numero++) {
-            int aux = numero;
+            int divisNoDecimal = numero;
 
             int contador = 0;
 
-            while (aux != 0) {
-                aux = aux / 10;
+            while (divisNoDecimal != 0) {
+                divisNoDecimal = divisNoDecimal / 10;
                 contador++;
             }
-            numPrimo = contador;
+            numComparacion = contador;
 
-            if (numPrimo == numeroDigitos) {
+            if (numComparacion == numeroDigitos) {
                 if (numero < 4) {
-                    confirmPrimo = true;
+                    numPrimo = true;
                 } else {
                     if (numero % 2 == 0) {
-                        confirmPrimo = false;
+                        numPrimo = false;
                     } else {
                         int contador1 = 0;
-                        int i1 = 1;
-                        int k = (numero - 1) / 2;
-                        if (k % 2 == 0) {
-                            k--;
+                        int divisores = 1;
+                        int compPar = (numero - 1) / 2;
+                        if (compPar % 2 == 0) {
+                            compPar--;
                         }
 
-                        while (i1 <= k) {
-                            if (numero % i1 == 0) {
+                        while (divisores <= compPar) {
+                            if (numero % divisores == 0) {
                                 contador1++;
                             }
-                            i1 += 2;
+                            divisores += 2;
                             if (contador1 == 2) {
-                                i1 = k + 1;
+                                divisores = compPar + 1;
                             }
                         }
 
                         if (contador1 == 1) {
-                            confirmPrimo = true;
+                            numPrimo = true;
                         }
                     }
                 }
 
-                if (confirmPrimo == true) {
+                if (numPrimo == true) {
                     System.out.println(numero);
                 }
             }
