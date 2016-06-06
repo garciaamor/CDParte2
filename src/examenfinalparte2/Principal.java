@@ -15,7 +15,7 @@ public class Principal {
          * 
          */
         static int numeroDigitos = 0;
-        static int numComparacion = 0;
+        static int numPrimo = 0;
         
         
 /**
@@ -37,7 +37,7 @@ public class Principal {
      * El metodo a continuacion realiza un for para hacer el calculo de los numeros primos
      * El for a continuacion contempla hasta el numero 99999, es decir, 5 digitos, el programa no sirve para calcular un numero mayor, ya que el numero de valores a devolver seria demasiado alto y haria el programa muy lento    
      * El metodo es declarado static para poder trabajar con el m�s comodamente desde la misma clase
-     * El boolean confirmPrimo es el que nos indicara al final si el numero comparado es primo; de serlo, cambiara su valor a true y se nos devolvera por pantalla la variable numero
+     * El boolean numPrimo es el que nos indicara al final si el numero comparado es primo; de serlo, cambiara su valor a true y se nos devolvera por pantalla la variable numero
      */
     
     public static void Calculo(){
@@ -50,9 +50,9 @@ public class Principal {
                 aux = aux / 10;
                 contador++;
             }
-            numComparacion = contador;
+            numPrimo = contador;
 
-            if (numComparacion == numeroDigitos) {
+            if (numPrimo == numeroDigitos) {
                 if (numero < 4) {
                     confirmPrimo = true;
                 } else {
