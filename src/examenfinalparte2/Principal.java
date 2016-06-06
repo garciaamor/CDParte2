@@ -60,7 +60,7 @@ public class Principal {
                     if (numero % 2 == 0) {
                         numPrimo = false;
                     } else {
-                        int contador1 = 0;
+                        int comprContador = 0;
                         int divisores = 1;
                         int compPar = (numero - 1) / 2;
                         if (compPar % 2 == 0) {
@@ -69,15 +69,15 @@ public class Principal {
 
                         while (divisores <= compPar) {
                             if (numero % divisores == 0) {
-                                contador1++;
+                                comprContador++;
                             }
                             divisores += 2;
-                            if (contador1 == 2) {
+                            if (comprContador == 2) {
                                 divisores = compPar + 1;
                             }
                         }
 
-                        if (contador1 == 1) {
+                        if (comprContador == 1) {
                             numPrimo = true;
                         }
                     }
