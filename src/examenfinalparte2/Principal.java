@@ -18,7 +18,12 @@ public class Principal {
         static int ndig = 0;
         
         
-
+/**
+ * El metodo main simplemente llama a los dos metodos en los que convertimos el programa:
+ * El metodo Validar(), con el que se confirma el numero de digitos y se comprueba que sea el correcto para correr el programa
+ * El metodo Calculo(), que contiene la mayor parte del codigo del programa y se encarga de, por medio de for, if y while de calcular y mostrar correctamente los numeros primos por orden
+ * @param arg 
+ */
     public static void main(String arg[]) {
         Validar();
         Calculo();
@@ -32,6 +37,7 @@ public class Principal {
      * El metodo a continuacion realiza un for para hacer el calculo de los numeros primos
      * El for a continuacion contempla hasta el numero 99999, es decir, 5 digitos, el programa no sirve para calcular un numero mayor     
      * El metodo es declarado static para poder trabajar con el m�s comodamente desde la misma clase
+     * Este meto
      */
     
     public static void Calculo(){
